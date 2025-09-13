@@ -1,6 +1,6 @@
 # Stronka-z-kursami
-=======
-(https://ikubaszi.github.io/KursJZ/SUPER_DUPER_STRONKA/menu.html
+
+https://ikubaszi.github.io/KursJZ/SUPER_DUPER_STRONKA/menu.html
 
 Strony kursowe
 
