@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test języka C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0E5ED6, #9A9C3B);
+            background-size: 120% 120%;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            padding: 0 2rem;
+            box-sizing: border-box;
+            float: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9900;
+            color: black;
+            border: 4px solid black;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2rem;
+            transition: background-color 0.2s;
+            float: left;
+        }
+
+        .menu-button:hover {
+            background-color: #bd212d;
+        }
+
+        .question {
+            margin-top: 40px;
+            font-size: 24px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .answer {
+            margin-top: 20px;
+            font-size: 18px;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            font-size: 16px;
+            border: 2px solid #FF9900;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        .button-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9900;
+            color: black;
+            border: 3px solid black;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 0 10px;
+        }
+
+        .button:hover {
+            background-color: #bd212d;
+        }
+
+        .correct-answer {
+            color: green;
+        }
+
+        .incorrect-answer {
+            color: red;
+        }
+        .button:hover {
+            background: linear-gradient(45deg, #ff0000, #ff8000, #ffff00, #00ff00, #0000ff, #8000ff, #ff00ff);
+            background-size: 400%;
+            animation: rainbow 4s infinite;
+        }
+
+        @keyframes rainbow {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <h1>Test języka C#</h1>
+        <a href="menu.html" class="menu-button">&#9776;</a>
+    </div>
+
+    <div class="question">
+        <p>Kto stworzył język C#?</p>
+    </div>
+    <form id="quizForm">
+
+        <div class="answer">
+            <label><input type="radio" name="question1" value="a"> Anders Hejlsberg</label><br>
+            <label><input type="radio" name="question1" value="b"> Linus Torvalds</label><br>
+            <label><input type="radio" name="question1" value="c"> Guido van Rossum </label><br>
+            <span id="roz1"></span>
+        </div>
+
+        <div class="question">
+            <p>Jaki jest podstawowy typ danych w języku C#?</p>
+        </div>
+
+        <div class="answer">
+            <label><input type="radio" name="question2" value="a"> char</label><br>
+            <label><input type="radio" name="question2" value="b"> string</label><br>
+            <label><input type="radio" name="question2" value="c"> int</label><br>
+            <span id="roz2"></span>
+        </div>
+
+        <div class="question">
+            <p>Czy C# jest językiem obiektowym?</p>
+        </div>
+
+        <div class="answer">
+            <input type="text" id="question3" name="question3">
+            <span id="roz3"></span>
+        </div>
+        <div id="popup" class="popup">
+            <div class="button-container">
+
+                <button type="button"
+                        onclick="clearForm() " class="button">Wyczyść </button>
+                <button type="button" onclick="checkAnswers()" class="button">Sprawdź</button>
+                <p id="result"></p>
+                <p id="result"></p>
+                <p id="result2"></p>
+                <p id="result2"></p>
+            </div>
+        </div>
+
+    </form>
+    <script>
+        function clearForm() {
+            document.getElementById("quizForm").reset();
+            document.getElementById("roz1").innerHTML = "";
+            document.getElementById("roz2").innerHTML = "";
+            document.getElementById("roz3").innerHTML = "";
+            document.getElementById("result").innerHTML = "";
+        }
+
+        function checkAnswers() {
+            var correctAnswers = 0;
+            var correctAnswers1 = ["a"];
+            var correctAnswers2 = ["c"];
+            var correctAnswers3 = ["tak"];
+            var question1 = document.querySelector('input[name="question1"]:checked');
+            var question2 = document.querySelector('input[name="question2"]:checked');
+            var question3 = document.getElementById("question3").value;
+
+
+            if (question1 && correctAnswers1.includes(question1.value)) {
+                correctAnswers++;
+                document.getElementById("roz1").innerHTML = "Poprawna odpowiedź";
+                document.getElementById("roz1").style.color = "green";
+            } else {
+                document.getElementById("roz1").innerHTML = "Błędna odpowiedź";
+                document.getElementById("roz1").style.color = "red";
+            }
+
+            if (question2 && correctAnswers2.includes(question2.value)) {
+                correctAnswers++;
+                document.getElementById("roz2").innerHTML = "Poprawna odpowiedź";
+                document.getElementById("roz2").style.color = "green";
+            } else {
+                document.getElementById("roz2").innerHTML = "Błędna odpowiedź";
+                document.getElementById("roz2").style.color = "red";
+            }
+
+            if (correctAnswers3.includes(question3.toLowerCase())) {
+                correctAnswers++;
+                document.getElementById("roz3").innerHTML = "Poprawna odpowiedź";
+                document.getElementById("roz3").style.color = "green";
+            } else {
+                document.getElementById("roz3").innerHTML = "Błędna odpowiedź";
+                document.getElementById("roz3").style.color = "red";
+            }
+
+
+            document.getElementById("result").innerHTML = "Uzyskane punkty: " + correctAnswers;
+            document.getElementById("result").style.color = "green";
+
+            if (correctAnswers == 3) {
+                document.getElementById("result2").innerHTML = "Gratulacje! Jesteś gotowy na dalsze wyzwania!";
+                document.getElementById("result2").style.color = "green";
+            }
+        }
+    </script>
+</div>
+</body>
+</html>

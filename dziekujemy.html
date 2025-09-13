@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You!</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(to right, #F00FB1, #292626);
+            animation: gradientAnimation 5s infinite alternate;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        h1 {
+            font-size: 4rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            color: transparent;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+            animation: textAnimation 5s infinite alternate;
+            text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+            text-align: center;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        @keyframes textAnimation {
+            0% {
+                color: red;
+            }
+            20% {
+                color: orange;
+            }
+            40% {
+                color: yellow;
+            }
+            60% {
+                color: green;
+            }
+            80% {
+                color: blue;
+            }
+            100% {
+                color: purple;
+            }
+        }
+        a{
+             text-decoration: none;
+            color: inherit;
+        }
+#codingButton:hover .arrow {
+            animation: slideArrow 1s forwards;
+        }
+
+        #codingButton .arrow {
+            position: absolute;
+            left: 50%;
+            top: 80%;
+            transform: translate(-50%, -50%) rotate(0deg);
+            transition: transform 0.5s ease-in-out;
+        }
+
+        #codingButton:hover .arrow {
+            transform: translate(-50%, -50%) rotate(180deg);
+        }
+
+        @keyframes slideArrow {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+            100% {
+                transform: translate(-50%, -50%) rotate(180deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>DZIĘKUJEMY !!!! <br> :)
+        <a href="NoIESSSAA.html" id="codingButton"> <br>
+        <span class="arrow">(✿◠‿◠)</span></h1>
+
+</body>
+</html>

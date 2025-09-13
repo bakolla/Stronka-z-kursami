@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angular Framework</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0E5ED6, #9A9C3B);
+            background-size: 120% 120%;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .header {
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .info img {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+        }
+
+        .info-text {
+            flex-grow: 1;
+        }
+
+        .code-section {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .code-input,
+        .code-output {
+            flex-grow: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .code-output {
+            margin-left: 20px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn2 {
+            display: inline-block;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #0066FF;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF5733;
+        }
+
+        .btn2:hover {
+            background-color: #FF5733;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9900;
+            color: black;
+            border: 4px solid black;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2rem;
+            transition: background-color 0.2s;
+            float: right;
+        }
+        img {
+            max-width: 100px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+
+        }
+        h1 {
+            margin-left: 85px;
+
+            margin-top: 50px;
+            text-align: center;
+            color: #FFF; /* Zmiana koloru tekstu */
+            font-size: 24px; /* Zwiększenie wielkości czcionki */
+        }
+        }
+        .menu-button:hover {
+            background-color: #bd212d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="menu.html" class="menu-button">&#9776;</a>
+    <header class="header">
+        <h1>Angular</h1>
+        <img src="focie/angular.png" alt="Author">
+        <h2>Informacje na temat frameworka</h2>
+    </header>
+    <div class="info">
+
+        <div class="info-text">
+            <h3>
+                <p>
+                    Angular jest popularnym frameworkiem open-source do tworzenia nowoczesnych aplikacji internetowych i mobilnych. Stworzony przez zespół inżynierów z Google, Angular oferuje kompleksowe narzędzia i funkcje, które umożliwiają programistom szybkie tworzenie skalowalnych i wydajnych aplikacji.
+                </p>
+                <p>
+                    Opiera się na języku TypeScript, co pozwala na bardziej wydajne i bezpieczne pisanie kodu. TypeScript jest nadzbiorem JavaScript, który dodaje statyczne typowanie, co pomaga w wykrywaniu błędów na etapie kompilacji, zanim kod zostanie uruchomiony.
+                </p>
+                <p>
+                    Angular wykorzystuje architekturę komponentową, co ułatwia tworzenie modularnych i łatwych w utrzymaniu aplikacji. Komponenty w Angularze są samodzielnymi jednostkami, które można łatwo wielokrotnie wykorzystywać, testować i zarządzać nimi niezależnie od reszty aplikacji.
+                </p>
+                <p>
+                    Jednym z kluczowych elementów Angulara jest system szablonów, który umożliwia tworzenie dynamicznych i interaktywnych interfejsów użytkownika za pomocą prostego HTML-a. Szablony mogą być wzbogacane o wyrażenia Angulara, które umożliwiają dwukierunkowe wiązanie danych, dynamiczne aktualizowanie widoków oraz obsługę zdarzeń użytkownika.
+                </p>
+                <p>
+                    Angular oferuje również rozbudowany system routingu, który pozwala na zarządzanie nawigacją w aplikacji. Dzięki temu możliwe jest tworzenie wielostronicowych aplikacji z łatwością przechodzenia między różnymi widokami bez przeładowywania całej strony.
+                </p>
+                <p>
+                    Dodatkowo, Angular posiada zaawansowane narzędzia do testowania aplikacji, takie jak Karma i Jasmine, które umożliwiają pisanie testów jednostkowych i integracyjnych, co jest kluczowe dla utrzymania wysokiej jakości kodu i niezawodności aplikacji.
+                </p>
+                <p>
+                    Dzięki swojej wszechstronności i silnemu wsparciu społeczności, Angular jest jednym z najważniejszych frameworków do tworzenia nowoczesnych aplikacji internetowych. Jego znajomość jest ceniona na rynku pracy, a umiejętność tworzenia aplikacji w Angularze otwiera wiele możliwości zawodowych dla programistów w różnych branżach.
+                </p>
+            </h3>
+        </div>
+    </div>
+    <h2>Postępuj jak na filmiku aby zrozumieć tę pradawną wiedzę :)</h2>
+    <div class="video-container">
+        <video width="700" height="400" controls>
+            <source src="focie/FIML_INSTUKTARZOWY.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje elementu video.
+        </video>
+    </div>
+    <h2>Przydatne informacje na temat kodu</h2>
+
+    <div class="code-section">
+        <textarea id="codeInput" class="code-input" placeholder="Wpisz swój kod tutaj"></textarea>
+        <div id="codeOutput" class="code-output">Tutaj będzie wyświetlony wynik Twojego kodu.</div>
+    </div>
+
+    <script>
+        function submitCode() {
+            const codeInput = document.getElementById('codeInput');
+            const codeOutput = document.getElementById('codeOutput');
+
+            codeOutput.innerText = '';
+
+            const userCode = codeInput.value;
+
+            try {
+                const result = eval(`(function(){${userCode}})()`);
+                codeOutput.innerText = result;
+            } catch (error) {
+                codeOutput.innerText = `Błąd: ${error}`;
+            }
+        }
+    </script>
+    <div class="container">
+        <button class="btn2" onclick="submitCode()">Sprawdź swój kod</button>
+        <a class="btn" href="angulartes.html">Rozpocznij test mistrzu</a>
+    </div>
+</div>
+
+</body>
+</html>

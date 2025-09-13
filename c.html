@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Język C</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to bottom, #0E5ED6, #9A9C3B);
+      background-size: 120% 120%;
+      min-height: 100vh;
+      color: white;
+    }
+    img {
+      max-width: 100px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-right: 20px;
+
+    }
+    h1 {
+      margin-left: 85px;
+
+      margin-top: 50px;
+      text-align: center;
+      color: #FFF; /* Zmiana koloru tekstu */
+      font-size: 24px; /* Zwiększenie wielkości czcionki */
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .header {
+      text-align: center;
+      margin-top: 50px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    .info {
+      display: flex;
+      align-items: center;
+      margin-top: 50px;
+    }
+
+    .info img {
+      max-width: 200px;
+      border-radius: 50%;
+      box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      margin-right: 20px;
+    }
+
+    .info-text {
+      flex-grow: 1;
+    }
+
+    .code-section {
+      display: flex;
+      margin-top: 50px;
+    }
+
+    .code-input,
+    .code-output {
+      flex-grow: 1;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .code-output {
+      margin-left: 20px;
+    }
+
+    h2 {
+      margin-top: 50px;
+      text-align: center;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: #4CAF50;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn2 {
+      display: inline-block;
+      padding: 14px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      text-align: center;
+      text-decoration: none;
+      font-size: 16px;
+      background-color: #0066FF;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #FF5733;
+    }
+
+    .btn2:hover {
+      background-color: #FF5733;
+    }
+
+    .menu-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #FF9900;
+      color: black;
+      border: 4px solid black;
+      border-radius: 50%;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 2rem;
+      transition: background-color 0.2s;
+      float: right;
+    }
+
+    .menu-button:hover {
+      background-color: #bd212d;
+    }
+  </style>
+</head>
+<body>
+
+<div class="container">
+  <a href="menu.html" class="menu-button">&#9776;</a>
+  <header class="header">
+    <h1>Język C</h1>
+    <img src="focie/c.png" alt="Autor">
+    <h2>Informacje na temat języka</h2>
+
+  </header>
+  <div class="info">
+
+    <div class="info-text">
+      <h3>
+        <p>
+          Język programowania C jest ogólnego zastosowania, proceduralny, wspierający programowanie strukturalne, zakres zmiennych leksykalnych oraz rekursję, z statycznym systemem typów. C zapewnia konstrukcje, które efektywnie mapują do typowych instrukcji maszynowych. Znaleziono trwałe zastosowanie w aplikacjach wcześniej kodowanych w języku asemblera.
+        </p>
+        <p>
+          Język C jest szeroko stosowany w systemach operacyjnych, oprogramowaniu systemowym, kompilatorach oraz różnych aplikacjach użytkowych. Jego składnia i semantyka miały ogromny wpływ na wiele współczesnych języków programowania, takich jak C++, C#, Java, JavaScript i Perl.
+        </p>
+        <p>
+          C jest ceniony za swoją wydajność i niskopoziomowy dostęp do pamięci, co czyni go idealnym wyborem do programowania systemów operacyjnych, sterowników urządzeń i innych zadań wymagających bezpośredniego zarządzania zasobami sprzętowymi. Jego prostota i moc sprawiają, że jest on popularnym wyborem do nauki podstaw programowania.
+        </p>
+        <p>
+          Jednym z kluczowych elementów języka C jest jego standardowa biblioteka, która dostarcza bogaty zestaw funkcji do manipulacji danymi, zarządzania plikami, alokacji pamięci oraz komunikacji z systemem operacyjnym. Dzięki temu programiści mają dostęp do narzędzi niezbędnych do tworzenia zaawansowanych aplikacji.
+        </p>
+        <p>
+          Chociaż język C został opracowany wiele dekad temu, nadal jest aktywnie używany i rozwijany. Nowoczesne implementacje języka wprowadzają nowe funkcje i optymalizacje, które poprawiają jego wydajność i bezpieczeństwo. Wielu programistów uważa, że znajomość C jest niezbędna do pełnego zrozumienia działania komputerów i systemów operacyjnych.
+        </p>
+        <p>
+          Dzięki swojej wszechstronności i trwałości, język C pozostaje fundamentem współczesnego programowania. Jego znajomość jest wysoko ceniona na rynku pracy, zwłaszcza w branżach związanych z systemami wbudowanymi, inżynierią oprogramowania, analizą danych i badaniami naukowymi. Nauka C daje solidne podstawy, które można wykorzystać przy nauce innych języków programowania i technologii.
+        </p>
+      </h3>
+    </div>
+  </div>
+  <h2>Postępuj jak na filmiku aby zrozumieć tę pradawną wiedzę :)</h2>
+  <div class="video-container">
+    <video width="700" height="400" controls>
+      <source src="focie/FIML_INSTUKTARZOWY.mp4" type="video/mp4">
+      Twoja przeglądarka nie obsługuje elementu wideo.
+    </video>
+  </div>
+  <h2>Przydatne informacje na temat kodu</h2>
+
+  <div class="code-section">
+    <textarea id="codeInput" class="code-input" placeholder="Wpisz swój kod tutaj"></textarea>
+    <div id="codeOutput" class="code-output">Tutaj będzie wyświetlony wynik Twojego kodu.</div>
+  </div>
+
+  <script>
+    function submitCode() {
+      const codeInput = document.getElementById('codeInput');
+      const codeOutput = document.getElementById('codeOutput');
+
+      codeOutput.innerText = '';
+
+      const userCode = codeInput.value;
+
+      try {
+        const result = eval(`(function(){${userCode}})()`);
+        codeOutput.innerText = result;
+      } catch (error) {
+        codeOutput.innerText = `Błąd: ${error}`;
+      }
+    }
+  </script>
+  <div class="container">
+    <button class="btn2" onclick="submitCode()">Sprawdź swój kod</button>
+    <a class="btn" href="ctest.html">Rozpocznij test</a>
+  </div>
+</div>
+
+</body>
+</html>

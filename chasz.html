@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Język C#</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(to bottom, #0E5ED6, #9A9C3B);
+            background-size: 120% 120%;
+            min-height: 100vh;
+            color: white;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            position: relative;
+        }
+        img {
+            max-width: 100px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+
+        }
+        h1 {
+            margin-left: 85px;
+
+            margin-top: 50px;
+            text-align: center;
+            color: #FFF; /* Zmiana koloru tekstu */
+            font-size: 24px; /* Zwiększenie wielkości czcionki */
+        }
+        .header {
+            text-align: center;
+            margin-top: 50px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .info {
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .info img {
+            max-width: 200px;
+            border-radius: 50%;
+            box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-right: 20px;
+        }
+
+        .info-text {
+            flex-grow: 1;
+        }
+
+        .code-section {
+            display: flex;
+            margin-top: 50px;
+        }
+
+        .code-input,
+        .code-output {
+            flex-grow: 1;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .code-output {
+            margin-left: 20px;
+        }
+
+        h2 {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn2 {
+            display: inline-block;
+            padding: 14px 20px;
+            margin: 8px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            background-color: #0066FF;
+            color: white;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #FF5733;
+        }
+
+        .btn2:hover {
+            background-color: #FF5733;
+        }
+
+        .menu-button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #FF9900;
+            color: black;
+            border: 4px solid black;
+            border-radius: 50%;
+            text-decoration: none;
+            font-size: 18px;
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-left: 2rem;
+            transition: background-color 0.2s;
+            float: right;
+        }
+
+        .menu-button:hover {
+            background-color: #bd212d;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <a href="menu.html" class="menu-button">&#9776;</a>
+    <header class="header">
+        <h1>Język C#</h1>
+        <img src="focie/chasz.png" alt="Autor">
+        <h2>Informacje na temat języka</h2>
+    </header>
+    <div class="info">
+
+        <div class="info-text">
+            <h3>
+                <p>
+                    C# to wszechstronny język programowania, rozwijany przez firmę Microsoft. Został zaprojektowany z myślą o tworzeniu aplikacji na platformę .NET Framework. Jest językiem obiektowym, opartym na składni języka C++, ale z dodatkowymi funkcjonalnościami ułatwiającymi programowanie.
+                </p>
+                <p>
+                    Język C# oferuje bogaty zestaw funkcji, które ułatwiają tworzenie nowoczesnych aplikacji. Jedną z kluczowych cech C# jest jego wsparcie dla programowania obiektowego, co pozwala na tworzenie złożonych aplikacji w sposób bardziej zorganizowany i modułowy. Dzięki temu programiści mogą tworzyć komponenty, które są łatwe do utrzymania i ponownego wykorzystania.
+                </p>
+                <p>
+                    C# jest również językiem zarządzanym, co oznacza, że kod jest kompilowany do pośredniego języka bajtowego (MSIL), który jest następnie wykonywany przez środowisko uruchomieniowe .NET (CLR). Dzięki temu programiści mają dostęp do zaawansowanych funkcji zarządzania pamięcią, takich jak automatyczne zarządzanie pamięcią (garbage collection), co minimalizuje ryzyko wystąpienia błędów związanych z pamięcią.
+                </p>
+                <p>
+                    Jednym z głównych zastosowań języka C# jest tworzenie aplikacji desktopowych za pomocą Windows Forms lub WPF (Windows Presentation Foundation). Ponadto, C# jest szeroko stosowany w tworzeniu aplikacji webowych z użyciem ASP.NET, co umożliwia tworzenie dynamicznych stron internetowych i serwisów.
+                </p>
+                <p>
+                    C# wspiera również programowanie asynchroniczne, co pozwala na tworzenie aplikacji responsywnych i wydajnych. Dzięki async/await programiści mogą łatwo zarządzać operacjami asynchronicznymi, co jest szczególnie ważne w przypadku aplikacji, które wymagają wysokiej wydajności i niskiego opóźnienia.
+                </p>
+                <p>
+                    Kolejną zaletą języka C# jest jego integracja z innymi technologiami Microsoftu, takimi jak Azure, Visual Studio, SQL Server i wiele innych. Dzięki temu programiści mogą korzystać z ekosystemu narzędzi i usług, które ułatwiają rozwijanie, testowanie i wdrażanie aplikacji.
+                </p>
+                <p>
+                    C# jest także popularnym wyborem w branży gier wideo dzięki silnikowi Unity, który umożliwia tworzenie gier na różne platformy, w tym na komputery, konsole i urządzenia mobilne. Dzięki bogatemu ekosystemowi bibliotek i narzędzi, C# pozostaje jednym z najważniejszych języków programowania we współczesnym świecie.
+                </p>
+            </h3>
+        </div>
+    </div>
+    <h2>Postępuj jak na filmiku, aby zrozumieć tę pradawną wiedzę :)</h2>
+    <div class="video-container">
+        <video width="700" height="400" controls>
+            <source src="focie/FIML_INSTUKTARZOWY.mp4" type="video/mp4">
+            Twoja przeglądarka nie obsługuje elementu wideo.
+        </video>
+    </div>
+    <h2>Przydatne informacje na temat kodu</h2>
+
+    <div class="code-section">
+        <textarea id="codeInput" class="code-input" placeholder="Wpisz swój kod tutaj"></textarea>
+        <div id="codeOutput" class="code-output">Tutaj będzie wyświetlony wynik Twojego kodu.</div>
+    </div>
+
+    <script>
+        function submitCode() {
+            const codeInput = document.getElementById('codeInput');
+            const codeOutput = document.getElementById('codeOutput');
+
+            codeOutput.innerText = '';
+
+            const userCode = codeInput.value;
+
+            try {
+                const result = eval(`(function(){${userCode}})()`);
+                codeOutput.innerText = result;
+            } catch (error) {
+                codeOutput.innerText = `Błąd: ${error}`;
+            }
+        }
+    </script>
+    <div class="container">
+        <button class="btn2" onclick="submitCode()">Sprawdź swój kod</button>
+        <a class="btn" href="chashtest.html">Rozpocznij test</a>
+    </div>
+
+</div>
+
+</body>
+</html>

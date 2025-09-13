@@ -1,0 +1,107 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Runaway Button</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
+
+        body {
+            background-color: rgb(31, 31, 31);
+        }
+
+        button {
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            transform: translate(-50%, -50%);
+            height: 4rem;
+            width: 10rem;
+            font-size: 1.5rem;
+            border-radius: 5px;
+            border: none;
+            box-shadow: 1px 1px 5px black;
+            background-color: white;
+        }
+
+        h1 {
+            position: absolute;
+            top: 30%;
+            right: 38%;
+            text-align: center;
+            font-size: 20px;
+            font-size: 32px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            margin-bottom: 2rem;
+            color: #ffffff;
+        }
+
+        .rating {
+            position: absolute;
+            top: 50%;
+            left: calc(50% + 5.5rem);
+            transform: translateY(-50%);
+            height: 4rem;
+            width: 10rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 1px 1px 5px black;
+        }
+
+        .rating-text {
+            font-size: 1.5rem;
+
+        }
+        a{
+             text-decoration: none;
+            color: inherit;
+        }
+    </style>
+</head>
+<body>
+    <h1> Proszę o ocenę naszego projektu :) </h1>
+    
+    <button id="runaway-btn"> <a href="notoidziemypic.html  "> 2.5</button>
+    <div class="rating">
+        <span class="rating-text"> <a href="dziekujemy.html"> 5.0</span>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+    <script>
+        const button = document.getElementById("runaway-btn");
+        const rating = document.querySelector(".rating");
+
+        const animateMove = (element, prop, pixels) =>
+            anime({
+                targets: element,
+                [prop]: `${pixels}px`,
+                easing: "easeOutCirc"
+            });
+
+        ["mouseover", "click"].forEach(function (el) {
+            button.addEventListener(el, function (event) {
+                const top = getRandomNumber(window.innerHeight - this.offsetHeight);
+                const left = getRandomNumber(window.innerWidth - this.offsetWidth);
+
+                animateMove(this, "left", left).play();
+                animateMove(this, "top", top).play();
+            });
+        });
+
+        const getRandomNumber = (num) => {
+            return Math.floor(Math.random() * (num + 1));
+        };
+    </script>
+
+</body>
+</html>
